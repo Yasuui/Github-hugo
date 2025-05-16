@@ -1,3 +1,72 @@
-baseURL = 'https://example.org/'
+# Site configuration
+baseURL = 'http://localhost:1313/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'My Portfolio'
+theme = 'github-style'
+
+# Enable features
+enableGitInfo = true
+enableEmoji = true
+
+# Build settings
+buildDrafts = true
+buildFuture = true
+buildExpired = true
+
+# Theme configuration
+[params]
+  # Site information
+  author = "Your Name"
+  description = "Personal portfolio and blog showcasing my work and thoughts"
+  keywords = ["portfolio", "blog", "developer", "software engineer"]
+  
+  # Social links
+  github = "https://github.com/yourusername"
+  twitter = "https://twitter.com/yourusername"
+  linkedin = "https://linkedin.com/in/yourusername"
+  
+  # Navigation
+  [[params.nav]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[params.nav]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 2
+  [[params.nav]]
+    name = "Blog"
+    url = "/posts/"
+    weight = 3
+  [[params.nav]]
+    name = "About"
+    url = "/about/"
+    weight = 4
+
+# Menu configuration
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 2
+  [[menu.main]]
+    name = "Blog"
+    url = "/posts/"
+    weight = 3
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 4
+
+# Markdown configuration
+[markup]
+  [markup.highlight]
+    style = "github"
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+    guessSyntax = true
