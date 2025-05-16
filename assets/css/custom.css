@@ -1,0 +1,195 @@
+/* Custom Theme Variables */
+:root {
+  /* Light Theme (Modified) */
+  --bg-primary: #f5f5f5;
+  --bg-secondary: #e8e8e8;
+  --text-primary: #2d2d2d;
+  --text-secondary: #4a4a4a;
+  --border-color: #d1d1d1;
+  --accent-color: #0366d6;
+  --code-bg: #f6f8fa;
+  --card-bg: #ffffff;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  /* Dark Theme (Abyss-inspired) */
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --text-primary: #c9d1d9;
+  --text-secondary: #8b949e;
+  --border-color: #30363d;
+  --accent-color: #58a6ff;
+  --code-bg: #161b22;
+  --card-bg: #1c2128;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Base Styles */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Card Styles */
+.card, .project-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Code Blocks */
+pre, code {
+  background-color: var(--code-bg) !important;
+  border: 1px solid var(--border-color);
+}
+
+/* Links */
+a {
+  color: var(--accent-color);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--text-primary);
+}
+
+/* Navigation */
+.nav-link {
+  color: var(--text-primary);
+  border: 1px solid transparent;
+}
+
+.nav-link:hover {
+  border-color: var(--border-color);
+  background-color: var(--bg-secondary);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--border-color);
+}
+
+/* Book Review Styles */
+.book-review {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+}
+
+.book-header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.book-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+
+.rating {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.star {
+  color: #ffd700;
+  font-size: 1.2rem;
+}
+
+.star.empty {
+  color: var(--text-secondary);
+}
+
+.book-content {
+  display: grid;
+  gap: 2rem;
+}
+
+.book-quick-thought {
+  background-color: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 6px;
+  border-left: 4px solid var(--accent-color);
+}
+
+.book-details {
+  background-color: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 6px;
+}
+
+.book-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.book-details li {
+  margin-bottom: 0.5rem;
+}
+
+/* Book List Page */
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.book-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s ease;
+  overflow: hidden;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+}
+
+.book-card-content {
+  padding: 1.5rem;
+}
+
+.book-card-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.book-card-author {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.book-card-rating {
+  margin-bottom: 1rem;
+}
+
+.book-card-thought {
+  font-style: italic;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+  margin-top: 1rem;
+} 

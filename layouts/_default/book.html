@@ -1,0 +1,41 @@
+{{ define "main" }}
+<article class="book-review">
+  <header class="book-header">
+    <h1>{{ .Title }}</h1>
+    <div class="book-meta">
+      <span class="author">by {{ .Params.author }}</span>
+      <span class="rating">
+        {{ range $i, $star := (seq .Params.rating) }}
+        <span class="star">★</span>
+        {{ end }}
+        {{ range $i, $star := (seq (sub 5 .Params.rating)) }}
+        <span class="star empty">☆</span>
+        {{ end }}
+      </span>
+    </div>
+  </header>
+
+  <div class="book-content">
+    <div class="book-summary">
+      {{ .Content }}
+    </div>
+    
+    <div class="book-quick-thought">
+      <h3>Quick Thought</h3>
+      <p>{{ .Params.quickThought }}</p>
+    </div>
+
+    <div class="book-details">
+      <h3>Book Details</h3>
+      <ul>
+        <li><strong>Genre:</strong> {{ .Params.genre }}</li>
+        <li><strong>Published:</strong> {{ .Params.published }}</li>
+        <li><strong>Pages:</strong> {{ .Params.pages }}</li>
+        {{ if .Params.isbn }}
+        <li><strong>ISBN:</strong> {{ .Params.isbn }}</li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</article>
+{{ end }} 
