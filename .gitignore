@@ -31,4 +31,8 @@ yarn.lock
 # Environment files
 .env
 .env.local
-.env.*.local 
+.env.*.local
+
+# Personal configuration
+config/personal.local.toml
+config/personal.toml 
